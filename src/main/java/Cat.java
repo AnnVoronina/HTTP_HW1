@@ -7,7 +7,7 @@ public class Cat {
     private String type; //тип животного
     @JsonIgnore private String nickName;//кличка // @JsonIgnore для игнорирования поля при дессириализации
     private String user;// -имя пользователя
-    private String upvotes;// голоса
+    private Integer upvotes;// голоса
 
 
     public Cat( // @JsonProperty указываем для дессириализации json понимает какие поля с какими в классе соотносятся
@@ -15,7 +15,7 @@ public class Cat {
                 @JsonProperty("text") String text,
                 @JsonProperty("type") String type,
                 @JsonProperty("user") String user,
-                @JsonProperty("upvotes") String upvotes)
+                @JsonProperty("upvotes") Integer upvotes)
                  {
         this.id = id;
         this.text = text;
@@ -40,7 +40,7 @@ public class Cat {
         return user;
     }
 
-    public String getUpvotes() {
+    public Integer getUpvotes() {
         return upvotes;
     }
 

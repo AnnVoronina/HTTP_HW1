@@ -1,17 +1,12 @@
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.HttpHeaders;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.impl.client.HttpClients;
-
 import java.io.IOException;
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,7 +15,6 @@ public class Main {
 
     static final String  URI = "https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats";
     public static ObjectMapper mapper = new ObjectMapper();
-  //  public static List<Cat> catList = null;
     public static void main(String[] args) throws IOException {
 
         //Метод createDefault () класса HttpClients возвращает объект CloseableHttpClient ,
